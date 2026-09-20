@@ -1,4 +1,6 @@
+import ProjectCard from "@/components/ProjectCard";
 import SectionDivider from "@/components/SectionDivider";
+import { projects } from "@/data/projects";
 import { Image } from "antd";
 import { Link } from "react-router";
 
@@ -52,6 +54,14 @@ const Home = () => {
         heading="Selected Work"
         description="Projects I've built, shipped, and learned from."
       />
+
+      <div className="home__work p-5 flex items-center justify-center">
+        <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">
+          {projects.map((project) => (
+            <ProjectCard data={project} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
