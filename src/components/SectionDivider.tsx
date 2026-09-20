@@ -5,7 +5,7 @@ export interface SectionDividerProps {
 
 const SectionDivider = ({ heading, description }: SectionDividerProps) => {
   return (
-    <div className="home__selectedWorkSeparator flex flex-col items-center justify-center bg-mist-950 py-6">
+    <div className="home__selectedWorkSeparator flex flex-col items-center justify-center bg-mist-950 py-6 mb-3">
       <div className="home__selectedWorkSeparator__label font-bold mb-2 text-md md:text-xl text-neutral-200">
         {heading.toUpperCase()}
       </div>

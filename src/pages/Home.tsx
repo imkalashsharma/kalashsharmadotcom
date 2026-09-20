@@ -1,3 +1,5 @@
+import About from "@/components/About";
+import EngineeringLabCards from "@/components/EngineeringLabCards";
 import ProjectCard from "@/components/ProjectCard";
 import SectionDivider from "@/components/SectionDivider";
 import { projects } from "@/data/projects";
@@ -55,12 +57,40 @@ const Home = () => {
         description="Projects I've built, shipped, and learned from."
       />
 
-      <div className="home__work p-5 flex items-center justify-center">
+      <div className="home__work p-5 flex items-center justify-center mb-3">
         <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.map((project) => (
-            <ProjectCard data={project} />
+            <ProjectCard key={project.heading} data={project} />
           ))}
         </div>
+      </div>
+
+      <SectionDivider
+        heading="Engineering Labs"
+        description="Experiments, prototypes, and rabbit holes I built to understand systems better."
+      />
+
+      <div className="home__engineeringLabs mb-5">
+        <EngineeringLabCards />
+      </div>
+
+      <SectionDivider
+        heading="Experience"
+        description="Where I've worked and I've built."
+      />
+
+      <SectionDivider
+        heading="Engineering Toolkit"
+        description="Technologies I use to build and explore."
+      />
+
+      <SectionDivider
+        heading="About"
+        description="I like building things I don't fully understand fully."
+      />
+
+      <div className="home__about">
+        <About />
       </div>
     </div>
   );
