@@ -6,7 +6,7 @@ import { Link } from "react-router";
 
 const Navbar = () => {
   return (
-    <div className="navbar flex justify-between items-center">
+    <div className="navbar flex justify-between items-center px-4 pt-3">
       <div className="navbar__banner text-sm md:text-lg font-medium">
         <Link to="/">Kalash Sharma</Link>
       </div>

@@ -7,7 +7,7 @@ import Projects from "@/pages/Projects";
 
 const Layout = () => {
   return (
-    <div className="layout bg-neutral-100 p-5">
+    <div className="layout bg-neutral-100">
       <BrowserRouter>
         <div className="layout__navbar mb-5">
           <Navbar />

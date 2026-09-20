@@ -1,3 +1,4 @@
+import SectionDivider from "@/components/SectionDivider";
 import { Image } from "antd";
 import { Link } from "react-router";
 
@@ -6,7 +7,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="home__intro flex flex-col items-center justify-center">
+      <div className="home__intro flex flex-col items-center justify-center mb-10 min-h-screen">
         <div className="hidden md:flex home__intro__avatar mb-2  md:mb-5">
           <Image width={150} height={150} src={avatarSrc} alt="avatar" />
         </div>
@@ -46,6 +47,11 @@ const Home = () => {
           </Link>
         </div>
       </div>
+
+      <SectionDivider
+        heading="Selected Work"
+        description="Projects I've built, shipped, and learned from."
+      />
     </div>
   );
 };
