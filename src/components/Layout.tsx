@@ -7,11 +7,12 @@ import Projects from "@/pages/Projects";
 
 const Layout = () => {
   return (
-    <div className="layout">
+    <div className="layout bg-neutral-100 p-5">
       <BrowserRouter>
-        <div className="layout__navbar">
+        <div className="layout__navbar mb-5">
           <Navbar />
         </div>
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/engineering-labs" element={<EngineeringLabs />} />
