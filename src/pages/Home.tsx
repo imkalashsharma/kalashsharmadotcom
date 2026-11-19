@@ -1,6 +1,7 @@
 import { Hero } from "@/components/home/Hero";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Builds } from "@/components/home/Builds";
+import { AboutMe } from "@/components/home/AboutMe";
 
 export const Home = () => {
   return (
@@ -16,6 +17,15 @@ export const Home = () => {
 
       <div className="home__builds">
         <Builds />
+      </div>
+
+      <SectionHeader
+        heading="About Me"
+        subheading="A little about the person behind the code."
+      />
+
+      <div className="home__aboutMe">
+        <AboutMe />
       </div>
     </div>
   );
