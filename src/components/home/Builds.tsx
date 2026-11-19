@@ -5,8 +5,7 @@ import { engineeringBuilds, majorProjects } from "@/data/builds";
 import type { MajorProjectType } from "@/data/builds";
 import { FlexContainer } from "@/components/FlexContainer";
 import { ProjectCard } from "../ProjectCard";
-import { Link } from "react-router";
-import { ArrowRight } from "react-feather";
+import { ViewAllButton } from "../ViewAllButton";
 
 export const Builds = () => {
   return (
@@ -47,17 +46,7 @@ const MajorProjects = () => {
         <MajorProjectView data={majorProjects} />
       )}
 
-      {majorProjects.length > 0 ? (
-        <div className="majorProjects__viewAll flex items-center justify-center my-8">
-          <Link
-            className="text-sm hover:underline flex items-center justify-center"
-            to={"/builds"}
-          >
-            <p>View All</p>
-            <ArrowRight className="w-3 h-3 ml-1" />
-          </Link>
-        </div>
-      ) : null}
+      {majorProjects.length > 0 ? <ViewAllButton to={"/builds"} /> : null}
     </div>
   );
 };
@@ -93,17 +82,7 @@ const EngineeringBuilds = () => {
         <EngineeringBuildsView data={engineeringBuilds} />
       )}
 
-      {engineeringBuilds.length > 0 ? (
-        <div className="engineeringBuilds__viewAll flex items-center justify-center my-8">
-          <Link
-            className="text-sm hover:underline flex items-center justify-center"
-            to={"/builds"}
-          >
-            <p>View All</p>
-            <ArrowRight className="w-3 h-3 ml-1" />
-          </Link>
-        </div>
-      ) : null}
+      {engineeringBuilds.length > 0 ? <ViewAllButton to={"/builds"} /> : null}
     </div>
   );
 };

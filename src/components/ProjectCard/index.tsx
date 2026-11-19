@@ -1,6 +1,7 @@
 import type { MajorProjectType } from "@/data/builds";
 import { Image } from "antd";
 import { GitHub, Globe } from "react-feather";
+import { Pill } from "@/components/Pill";
 
 interface ProjectCardProps {
   data: MajorProjectType;
@@ -24,7 +25,7 @@ export const ProjectCard = ({ data, highlight = false }: ProjectCardProps) => {
 
       <div className="projectCard__tech flex flex-wrap gap-3 my-5">
         {data.tech.map((tech) => (
-          <TechPill label={tech} />
+          <Pill label={tech} />
         ))}
       </div>
 
@@ -47,14 +48,6 @@ export const ProjectCard = ({ data, highlight = false }: ProjectCardProps) => {
           <Globe className="w-4 h-4 md:w-5 md:h-5" />
         </a>
       </div>
-    </div>
-  );
-};
-
-const TechPill = ({ label }: { label: string }) => {
-  return (
-    <div className="techPill bg-neutral-100 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm shadow-md">
-      {label}
     </div>
   );
 };

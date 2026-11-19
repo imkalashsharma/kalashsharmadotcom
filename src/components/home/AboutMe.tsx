@@ -6,10 +6,11 @@ export const AboutMe = () => {
 
   return (
     <FlexContainer>
-      <div className="aboutMe flex items-center justify-between md:w-4/5">
-        <div className="aboutMe__picture md:w-1/2">
+      <div className="aboutMe flex flex-col md:flex-row items-center justify-between md:w-4/5">
+        <div className="aboutMe__picture md:w-1/2 mb-8 mb:mb-0">
           <FlexContainer>
             <Image
+              preview={false}
               height={200}
               width={200}
               src={imgSrc}
@@ -18,7 +19,7 @@ export const AboutMe = () => {
           </FlexContainer>
         </div>
 
-        <div className="aboutMe__content text-sm md:text-md md:w-1/2">
+        <div className="aboutMe__content text-xs md:text-md md:w-1/2">
           <p className="mb-3">
             Somewhere between writing code, solving problems, and going down
             unexpected technical rabbit holes, I found my thing — software

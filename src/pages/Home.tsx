@@ -2,6 +2,7 @@ import { Hero } from "@/components/home/Hero";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Builds } from "@/components/home/Builds";
 import { AboutMe } from "@/components/home/AboutMe";
+import { Writings } from "@/components/home/Writings";
 
 export const Home = () => {
   return (
@@ -26,6 +27,15 @@ export const Home = () => {
 
       <div className="home__aboutMe">
         <AboutMe />
+      </div>
+
+      <SectionHeader
+        heading="Writings"
+        subheading="A space for sharing ideas, documenting learnings, and exploring the craft of software engineering."
+      />
+
+      <div className="home__writings">
+        <Writings />
       </div>
     </div>
   );
